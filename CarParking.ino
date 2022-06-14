@@ -27,11 +27,8 @@ int carExit = D7;                     // Exit sensor
 int slot2 = D6;				  // Slot 2 sensor
 int slot1  = D2;                      // Slot 1 sensor
 int count = 0, sumin = 0, sumout = 0;
-int CLOSE_ANGLE = 90;
-int OPEN_ANGLE = 0;
 
 int entrysensor, exitsensor, s1, s2, s3;
-String trangthai = "", trangthai1 = "", trangthai2 = "", trangthai3 = "";
 boolean s1_occupied = false;
 boolean s2_occupied = false;
 boolean s3_occupied = false;
@@ -134,24 +131,22 @@ void loop() {
   }
 
   if (s1 == 1 && s1_occupied == false) {
-    Serial.println("Occupied1 ");
+    Serial.println("Available1 ");
     s1_occupied = true;
-
-
   }
 
   if (s1 == 0 && s1_occupied == true) {
-    Serial.println("Available1 ");
+    Serial.println("Occupied1 ");
     s1_occupied = false;
   }
 
   if (s2 == 1 && s2_occupied == false) {
-    Serial.println("Occupied2 ");
+    Serial.println("Available2 ");
     s2_occupied = true;
   }
 
   if (s2 == 0 && s2_occupied == true) {
-    Serial.println("Available2 ");
+    Serial.println("Occupied2 ");
     s2_occupied = false;
   }
 
