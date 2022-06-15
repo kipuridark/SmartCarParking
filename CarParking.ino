@@ -92,7 +92,7 @@ void loop() {
       delay(2000);
       servoin.write(90);
       lcd.clear();
-      if (count >= 2) {
+      if (count > 2) {
         lcd.clear();
         lcd.setCursor(0, 0);
         lcd.print("Bai xe khong con cho trong");
